@@ -1,10 +1,5 @@
 /* See LICENSE file for copyright and license details. */
 
-/* APPLIED PATCHES 		*/
-/* 1. ru_gaps			*/
-/* 2. winicon			*/
-/* 2. dynamicswallow	*/
-
 /* appearance */
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
 static const int gappx     			= 10;       /* gaps between windows */
@@ -14,20 +9,18 @@ static const int topbar             = 0;        /* 0 means bottom bar */
 #define ICONSIZE 16   							/* icon size */
 #define ICONSPACING 8 							/* space between icon and title */
 static const char *fonts[]          = { "monospace:size=12:dpi=120:antialias=true:autohint=true" };
+static const char *light			= "#356579";
+static const char *dark				= "#202020";
 static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { "#356579", "#202020", "#202020" },
-	[SchemeSel]  = { "#202020", "#356579", "#356579" },
+	/*               fg      bg      border   */
+	[SchemeNorm] = { &light, &dark,  &dark },
+	[SchemeSel]  = { &dark,  &light, &light },
 };
 
 /* tagging */
 static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
-	/* xprop(1):
-	 *	WM_CLASS(STRING) = instance, class
-	 *	WM_NAME(STRING) = title
-	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
@@ -107,7 +100,7 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
-	/* volume related keyboard buttons */
+	/* volume related extra keys */
 	{ 0, XF86XK_AudioMute, 			spawn, SHCMD("pamixer -t") },
 	{ 0, XF86XK_AudioRaiseVolume, 	spawn, SHCMD("pamixer --allow-boost -i 3") },
 	{ 0, XF86XK_AudioLowerVolume, 	spawn, SHCMD("pamixer --allow-boost -d 3") },
@@ -116,18 +109,18 @@ static Key keys[] = {
 /* button definitions */
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static Button buttons[] = {
-	/* click                event mask      button          function        argument */
-	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
-	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
-	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
-	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
-	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
-	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
-	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
-	{ ClkClientWin,         MODKEY|ShiftMask, Button1,      swalmouse,      {0} },
-	{ ClkTagBar,            0,              Button1,        view,           {0} },
-	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
-	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
-	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
+	/* click            event mask      	button     	function        argument */
+	{ ClkLtSymbol,      0,              	Button1,	setlayout,      {0} },
+	{ ClkLtSymbol,      0,              	Button3,    setlayout,      {.v = &layouts[2]} },
+	{ ClkWinTitle,      0,              	Button2,    zoom,           {0} },
+	{ ClkStatusText,    0,              	Button2,    spawn,          {.v = termcmd } },
+	{ ClkClientWin,     MODKEY,         	Button1,    movemouse,      {0} },
+	{ ClkClientWin,     MODKEY,         	Button2,    togglefloating, {0} },
+	{ ClkClientWin,    	MODKEY,         	Button3,    resizemouse,    {0} },
+	{ ClkClientWin,		MODKEY|ShiftMask, 	Button1,    swalmouse,      {0} },
+	{ ClkTagBar,        0,              	Button1,    view,           {0} },
+	{ ClkTagBar,        0,              	Button3,    toggleview,     {0} },
+	{ ClkTagBar,        MODKEY,         	Button1,    tag,            {0} },
+	{ ClkTagBar,        MODKEY,         	Button3,    toggletag,      {0} },
 };
 
