@@ -107,8 +107,10 @@ static Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 
-	{ 0, XK_Print,  				spawn, SHCMD("scrot -s -F ~/img/scrot.png") },
-	{ 0, XK_Pause,  				spawn, SHCMD("xset dpms force suspend") },
+	{ 0, XK_Print,  				spawn, SHCMD("scrot -f ~/img/scrot.jpg -os") },
+	{ MODKEY, XK_Print,  			spawn, SHCMD("scrot -f ~/img/scrot.jpg -o") },
+	{ MODKEY, XK_Pause,  			spawn, SHCMD("xset dpms force suspend") },
+	{ MODKEY, XK_Scroll_Lock,  		spawn, SHCMD("loginctl terminate-user $USER") },
 
 	/* volume related extra keys */
 	{ 0, XF86XK_AudioMute, 			spawn, SHCMD("pamixer -t") },
