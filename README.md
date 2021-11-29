@@ -17,7 +17,7 @@ dwm is an extremely fast, small, and dynamic window manager for X.
     Restart dwm in-place using a keybind.
 - [systray](https://dwm.suckless.org/patches/systray/)
 
-Adds a system tray to the status bar for programs that support it.
+    Adds a system tray to the status bar for programs that support it.
 
 ## Requirements
 In order to build dwm you need the Xlib header files.
