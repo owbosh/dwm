@@ -14,8 +14,8 @@ static const int topbar = 0;        			/* 0 means bottom bar */
 #define ICONSIZE 24   							/* icon size */
 #define ICONSPACING 8 							/* space between icon and title */
 static const char *fonts[] = { "monospace:size=12:dpi=120:antialias=true:autohint=true" };
-static const char light[] = "#356579";
-static const char dark[] = "#202020";
+static const char light[] = "#3971ed";
+static const char dark[] = "#1d1f21";
 static const char *colors[][3] = {
 	/*             { fg,   bg,    border }   */
 	[SchemeNorm] = { light, dark, dark },
