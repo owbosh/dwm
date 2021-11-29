@@ -7,6 +7,7 @@ dwm is an extremely fast, small, and dynamic window manager for X.
 - [winicon](https://dwm.suckless.org/patches/winicon/)
 - [dynamicswallow](https://dwm.suckless.org/patches/dynamicswallow/)
 - [selfrestart](https://dwm.suckless.org/patches/selfrestart/)
+- [systray](https://dwm.suckless.org/patches/systray/)
 
 ## Requirements
 In order to build dwm you need the Xlib header files.
