@@ -1,20 +1,21 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 3;        /* border pixel of windows */
-static const int gappx     			= 10;       /* gaps between windows */
-static const unsigned int snap      = 32;       /* snap pixel */
-static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 0;        /* 0 means bottom bar */
-#define ICONSIZE 16   							/* icon size */
-#define ICONSPACING 8 							/* space between icon and title */
-static const char *fonts[]          = { "monospace:size=12:dpi=120:antialias=true:autohint=true" };
-static const char *light			= "#356579";
-static const char *dark				= "#202020";
-static const char *colors[][3]      = {
-	/*               fg      bg      border   */
-	[SchemeNorm] = { &light, &dark,  &dark },
-	[SchemeSel]  = { &dark,  &light, &light },
+static const int refreshrate = 144;			/* framerate of window-dragging actions */
+static const unsigned int borderpx = 3;     /* border pixel of windows */
+static const int gappx = 10;       			/* gaps between windows */
+static const unsigned int snap = 32;       	/* snap pixel */
+static const int showbar = 1;        		/* 0 means no bar */
+static const int topbar = 0;        		/* 0 means bottom bar */
+#define ICONSIZE 16   						/* icon size */
+#define ICONSPACING 8 						/* space between icon and title */
+static const char *fonts[] = { "monospace:size=12:dpi=120:antialias=true:autohint=true" };
+static const char light[] = "#356579";
+static const char dark[] = "#202020";
+static const char *colors[][3] = {
+	/*             { fg,   bg,    border }   */
+	[SchemeNorm] = { light, dark, dark },
+	[SchemeSel]  = { dark, light, light },
 };
 
 /* tagging */
@@ -32,8 +33,8 @@ static const int swalretroactive = 1;
 static const char swalsymbol[] = "👅";
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
-static const int nmaster     = 1;    /* number of clients in master area */
+static const float mfact = 0.55; 	 /* factor of master area size [0.05..0.95] */
+static const int nmaster = 1;    	 /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
 
