@@ -1,7 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
-/* APPLIED PATCHES */
+/* APPLIED PATCHES 	*/
 /* 1. ru_gaps		*/
+/* 2. winicon		*/
 
 /* appearance */
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
@@ -9,6 +10,8 @@ static const int gappx     			= 10;       /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
+#define ICONSIZE 16   							/* icon size */
+#define ICONSPACING 8 							/* space between icon and title */
 static const char *fonts[]          = { "monospace:size=12:dpi=120:antialias=true:autohint=true" };
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
