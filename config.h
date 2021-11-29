@@ -102,12 +102,17 @@ static Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
-    { MODKEY|ShiftMask,             XK_r,      self_restart,   {0} },
-	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+
+	{ 0, XK_Print,  				spawn, SHCMD("scrot -s -F ~/img/scrot.png") },
+	{ 0, XK_Pause,  				spawn, SHCMD("xset dpms force suspend") },
+
 	/* volume related extra keys */
 	{ 0, XF86XK_AudioMute, 			spawn, SHCMD("pamixer -t") },
 	{ 0, XF86XK_AudioRaiseVolume, 	spawn, SHCMD("pamixer --allow-boost -i 3") },
 	{ 0, XF86XK_AudioLowerVolume, 	spawn, SHCMD("pamixer --allow-boost -d 3") },
+
+    { MODKEY|ShiftMask,             XK_r,      self_restart,   {0} },
+	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
 /* button definitions */
