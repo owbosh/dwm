@@ -3,11 +3,11 @@ dwm is an extremely fast, small, and dynamic window manager for X.
 
 ## owbosh's build
 ### Patches
-- [ru_gaps](https://dwm.suckless.org/patches/ru_gaps/) The most sensible gaps patch in my opinion. Equal gaps on all sides. Removes gaps and borders when only one window is present. Adjustable at runtime.
-- [winicon](https://dwm.suckless.org/patches/winicon/) Displays the application icon of the focused window, next to the title in the status bar.
-- [dynamicswallow](https://dwm.suckless.org/patches/dynamicswallow/) Manually make windows "swallow" other windows (not limited to terminals). You can Mod + Shift + Mouse drag a window to another window to swallow it.
-- [selfrestart](https://dwm.suckless.org/patches/selfrestart/) Restart dwm in-place using a keybind.
-- [systray](https://dwm.suckless.org/patches/systray/) Adds a system tray to the status bar for programs that support it.
+- [ru_gaps](https://dwm.suckless.org/patches/ru_gaps/)
+- [winicon](https://dwm.suckless.org/patches/winicon/)
+- [dynamicswallow](https://dwm.suckless.org/patches/dynamicswallow/)
+- [selfrestart](https://dwm.suckless.org/patches/selfrestart/)
+- [systray](https://dwm.suckless.org/patches/systray/)
 
 ## Requirements
 In order to build dwm you need the Xlib header files.
