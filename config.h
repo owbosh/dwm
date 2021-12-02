@@ -13,7 +13,7 @@ static const int showbar = 1;        			/* 0 means no bar */
 static const int topbar = 0;        			/* 0 means bottom bar */
 #define ICONSIZE 24   							/* icon size */
 #define ICONSPACING 8 							/* space between icon and title */
-static const char *fonts[] = { "monospace:size=12:dpi=120:antialias=true:autohint=true" };
+static const char *fonts[] = { "monospace:size=12:dpi=120:antialias=true:autohint=true", "JoyPixels:size=12:dpi=120:antialias=true:autohint=true" };
 static const char light[] = "#3971ed";
 static const char dark[] = "#1d1f21";
 static const char *colors[][3] = {
@@ -34,7 +34,7 @@ static const Rule rules[] = {
 /* window swallowing */
 static const int swaldecay = 3;
 static const int swalretroactive = 1;
-/* static const char swalsymbol[] = "👅"; */
+static const char swalsymbol[] = "👅";
 
 /* layout(s) */
 static const float mfact = 0.55; 	 /* factor of master area size [0.05..0.95] */
@@ -61,7 +61,6 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 #include <X11/XF86keysym.h>
-#include "selfrestart.c"
 
 static Key keys[] = {
 	/* modifier         key        function        argument */
@@ -114,7 +113,6 @@ static Key keys[] = {
 	{ 0, XF86XK_AudioRaiseVolume, 	spawn, SHCMD("pamixer --allow-boost -i 3") },
 	{ 0, XF86XK_AudioLowerVolume, 	spawn, SHCMD("pamixer --allow-boost -d 3") },
 
-    { MODKEY|ShiftMask,             XK_r,      self_restart,   {1} },
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
