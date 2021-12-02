@@ -23,7 +23,7 @@ static const char *colors[][3] = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "web", "dev", "art", "fil", "vid", "img", "dis" };
 
 static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   monitor */
@@ -100,8 +100,6 @@ static Key keys[] = {
 	TAGKEYS( XK_5, 4)
 	TAGKEYS( XK_6, 5)
 	TAGKEYS( XK_7, 6)
-	TAGKEYS( XK_8, 7)
-	TAGKEYS( XK_9, 8)
 
 	{ 0,      XK_Print,  			spawn, SHCMD("scrot -f ~/img/scrot.jpg -os") },
 	{ MODKEY, XK_Print,  			spawn, SHCMD("scrot -f ~/img/scrot.jpg -o") },
