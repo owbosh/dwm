@@ -12,7 +12,7 @@ static const int showsystray = 1;     			/* 0 means no systray */
 static const int showbar = 1;        			/* 0 means no bar */
 static const int topbar = 0;        			/* 0 means bottom bar */
 #define ICONSIZE 24   							/* icon size */
-#define ICONSPACING 8 							/* space between icon and title */
+#define ICONSPACING 10 							/* space between icon and title */
 static const char *fonts[] = { "monospace:size=12:dpi=120:antialias=true:autohint=true", "JoyPixels:size=12:dpi=120:antialias=true:autohint=true" };
 static const char light[] = "#3971ed";
 static const char dark[] = "#1d1f21";
@@ -34,7 +34,7 @@ static const Rule rules[] = {
 /* window swallowing */
 static const int swaldecay = 3;
 static const int swalretroactive = 1;
-static const char swalsymbol[] = "👅";
+static const char swalsymbol[] = "SWAL";
 
 /* layout(s) */
 static const float mfact = 0.55; 	 /* factor of master area size [0.05..0.95] */
